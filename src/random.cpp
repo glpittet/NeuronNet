@@ -1,17 +1,13 @@
 #include "random.h"
 
-RandomNumbers::RandomNumbers(unsigned long int s) 
-{
-  initialize(s);
-}
-
-void RandomNumbers::initialize(unsigned long int s) {
-    seed = s;
-    if (seed == 0) {
-        std::random_device rd;
-        seed = rd();
-    }
-    rng = std::mt19937(seed);
+RandomNumbers::RandomNumbers(unsigned long int s) {
+  
+	seed = s;
+	if (seed == 0) {
+		std::random_device rd;
+		seed = rd();
+	}
+	rng = std::mt19937(seed);
 }
 
 void RandomNumbers::uniform_double(std::vector<double>& res, double lower, double upper)
