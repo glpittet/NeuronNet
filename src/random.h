@@ -18,7 +18,6 @@ public:
  */
 ///@{
     RandomNumbers(unsigned long int s=0);
-    void initialize(unsigned long int s=0);
 ///@}
 
 /*! @name Distributions
