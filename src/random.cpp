@@ -1,8 +1,7 @@
 #include "random.h"
 
-RandomNumbers::RandomNumbers(unsigned long int s) {
-  
-	seed = s;
+RandomNumbers::RandomNumbers(unsigned long int s) : seed(s) 
+{
 	if (seed == 0) {
 		std::random_device rd;
 		seed = rd();
